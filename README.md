@@ -1,0 +1,2 @@
+# static
+Drumee Static files
