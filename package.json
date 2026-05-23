@@ -31,5 +31,8 @@
   "homepage": "https://github.com/drumee/static#readme",
   "devDependencies": {
     "@drumee/server-dev-tools": "^1.1.34"
+  },
+  "dependencies": {
+    "lodash": "^4.18.1"
   }
 }
