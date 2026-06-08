@@ -33,6 +33,7 @@
     "@drumee/server-dev-tools": "^1.1.34"
   },
   "dependencies": {
+    "@hyzyla/pdfium": "^2.1.13",
     "lodash": "^4.18.1"
   }
 }
