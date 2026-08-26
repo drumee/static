@@ -16,7 +16,12 @@
   left: 8px;
   width: 8px;
   height: 50px;
-  background: var(--primary-400);
+  /* The analytics purple, with its own value as the fallback: --an-purple is
+     declared by analytics-ui's stylesheet, so it resolves on the dashboard
+     and falls back to the same colour everywhere else. Was --primary-400
+     (#c781ff), a pale lilac that read as washed out against the loading
+     screens' white card. */
+  background: var(--an-purple, #534ab7);
   animation: loader-wrapper 1.2s ease-in-out infinite;
 }
 
@@ -320,8 +325,10 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 5px solid var(--primary-300);
-  border-color: var(--primary-400) transparent var(--primary-500) transparent;
+  border: 5px solid var(--an-purple, #534ab7);
+  /* Two tones so the ring still reads as spinning; both derived from the
+     analytics purple rather than the old --primary-400/500 pair. */
+  border-color: var(--an-purple, #534ab7) transparent var(--an-purple-mid, #7f77dd) transparent;
   animation: drumee-spinner 1.2s linear infinite;
 }
 
