@@ -24,8 +24,12 @@ images, locales and sample media.
 ## How it is used
 
 These assets are served to the browser by a running Drumee instance. They are
-deployed as part of an install rather than installed as an npm dependency —
-`npm run deploy` copies them into the instance's static directory.
+shipped as part of an install rather than pulled in as an npm dependency: the
+`drumee-static` Debian package is built from this repository and installs the
+files under `/srv/drumee/static`.
+
+For a local checkout, `npm run setup` writes the development environment file
+and `npm run dev` runs the watcher against it.
 
 The icon sources that the workspace UI compiles into sprites live in
 [ui-team](https://github.com/drumee/ui-team) under `icons/`; this repository
